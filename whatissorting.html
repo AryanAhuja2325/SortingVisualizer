@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Sorting?</title>
+    <link rel="shortcut icon" href="imgs/icon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body onload='moveUp()'>
+    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top">
+        <a href="index.html" class="navbar-brand"><img src="imgs/icon.png" alt="" class='logo'></a>
+        <a href="index.html" class="navbar-brand">Sorting Visualizer</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navLinks">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="whatissorting.html" class="nav-link">What is Sorting?</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container1">
+        <h2 class="title1">Sorting</h2>
+        <p class=text1>
+            A Sorting Algorithm is used to rearrange a given array or list of elements according to a comparison
+            operator on the
+            elements. The comparison operator is used to decide the new order of elements in the respective data
+            structure.
+            Sorting refers to ordering data in an increasing or decreasing fashion according to some linear relationship
+            among the
+            data items.
+
+            Sorting can be done on names, numbers and records. Sorting reduces the For example, it is relatively easy to
+            look up the
+            phone number of a friend from a telephone dictionary because the names in the phone book have been sorted
+            into
+            alphabetical order.
+
+            This example clearly illustrates one of the main reasons that sorting large quantities of information is
+            desirable. That
+            is, sorting greatly improves the efficiency of searching. If we were to open a phone book, and find that the
+            names were
+            not presented in any logical order, it would take an incredibly long time to look up someone’s phone number.
+        </p>
+
+        <h4 class="title1">Types of Sorting: </h4>
+        <a class="link" href="index.html">
+            Visualise It!
+        </a>
+        <br><br>
+        <ul>
+            <li class=" text1">Bubble Sort</li>
+            <li class="text1">Selection Sort</li>
+            <li class="text1">Insertion Sort</li>
+            <li class="text1">Merge Sort</li>
+            <li class="text1">Quick Sort</li>
+        </ul>
+    </div>
+    <div class="container2">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Select a Sorting Algorithm
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                <button class="dropdown-item dd" type="button" id="bs">Bubble Sort</button>
+                <button class="dropdown-item" type="button" id="ss">Selection Sort</button>
+                <button class="dropdown-item" type="button" id="is">Insertion Sort</button>
+                <button class="dropdown-item" type="button" id="ms">Merge Sort</button>
+                <button class="dropdown-item" type="button" id="qs">Quick Sort</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container2">
+        <span id="title" class='title1'>
+        </span>
+        <br><br>
+        <p class="text1" id="text">
+
+        </p>
+        <br><br>
+        <img src="" alt="" id="img" class="thumbnail">
+    </div>
+
+    <script src="about.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+</body>
+
+</html>

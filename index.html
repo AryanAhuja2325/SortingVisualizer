@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
+    <link rel="shortcut icon" href="/imgs/icon.png" type="image/x-icon">
+    <title>Sorting Visualizer</title>
+</head>
+
+<body>
+    <nav id="mainNavbar" class="navbar navbar-dark navbar-expand-md py-0 fixed-top">
+        <a href="index.html" class="navbar-brand"><img src="imgs/icon.png" alt="" class='logo'></a>
+        <a href="index.html" class="navbar-brand">Sorting Visualizer</a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navLinks" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navLinks">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="whatissorting.html" class="nav-link">What is Sorting?</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="container">
+        <h1 class='title'>Sorting Visualizer</h1>
+        <div id="btnContainer">
+            <label for='slider' class='form-label labels'>Size</label>
+            <input type="range" min="20" max="100" step="20" value="20" id='slider' />
+            <label for='slider' class='form-label labels'>Speed</label>
+            <select id='speed'>
+                <option value="100">Slow</option>
+                <option value="50">Medium</option>
+                <option value="10">Fast</option>
+            </select>
+
+            <label for='slider' class='form-label labels'>Algorithm</label>
+            <select id='algo'>
+                <option value="bub">Bubble Sort</option>
+                <option value="select">Selection Sort</option>
+                <option value="insert">Insertion Sort</option>
+                <option value="merge">Merge Sort</option>
+                <option value="quick">Quick Sort</option>
+            </select>
+
+            <button id='sortBtn'>Sort</button>
+        </div>
+        <br>
+        <hr class='new'>
+        <div id="barContainer">
+        </div>
+    </div>
+    <script src='script.js'></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $("#mainNavbar");
+                $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+</body>
+
+</html>
